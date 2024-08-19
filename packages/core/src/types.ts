@@ -32,10 +32,10 @@ export interface StepAttr {
 
 export type StepWithAttr<T extends Step> = T & StepAttr;
 
-export type StepperContextType<
+export interface StepperContextType<
 	Steps extends readonly Step[],
 	Metadata extends Record<string, any>,
-> = {
+> {
 	steps: Steps;
 	metadata?: Metadata;
 	onChangeMetadata?: (metadata: Metadata) => void;
@@ -52,12 +52,12 @@ export type StepperContextType<
 			fn: (step: StepWithAttr<Step>) => React.ReactNode,
 		) => React.ReactNode | null;
 	};
-};
+}
 
-export type StepperProps<
+export interface StepperProps<
 	Steps extends readonly Step[],
 	Metadata extends Record<string, any>,
-> = {
+> {
 	steps: Steps;
 	initialStep?: Steps[number]["id"];
 	initialState?: "";
@@ -73,4 +73,4 @@ export type StepperProps<
 		nextStep: Steps[number],
 	) => void | Promise<void>;
 	children: React.ReactNode;
-};
+}

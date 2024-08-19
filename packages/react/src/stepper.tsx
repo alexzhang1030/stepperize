@@ -1,13 +1,9 @@
 import * as React from "react";
 
-import type {
-	Step,
-	StepAttr,
-	StepWithAttr,
-	StepperProps,
-} from "@stepperize/core";
+import type { Step, StepAttr, StepWithAttr } from "@stepperize/core";
 import { getStepById as getStepByIdHelper } from "@stepperize/core";
 import { StepperContext } from "./context";
+import type { StepperProps } from "./types";
 
 //#region Stepper
 

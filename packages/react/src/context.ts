@@ -1,5 +1,6 @@
-import type { Step, StepperContextType } from "@stepperize/core";
+import type { Step } from "@stepperize/core";
 import * as React from "react";
+import type { StepperContextType } from "./types";
 
 export const StepperContext = React.createContext<
 	StepperContextType<any, any> | undefined

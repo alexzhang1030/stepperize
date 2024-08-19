@@ -1,5 +1,5 @@
 // Types
-export type * from "@stepperize/core";
+export type { Step, StepperContextType, StepperProps } from "./types";
 
 // Components
 export { Stepper } from "./stepper";
